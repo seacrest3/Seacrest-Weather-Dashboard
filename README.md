@@ -49,10 +49,10 @@ When a user opens the app and searches for a city's weather in the serach input 
 
 3. The future weather conditions present a 5-day / 3-hour forecast for that city and displays:
     * The date
-    * An icon representation of weather conditions
-    * The temperature (i.e. average temperature over the sets of data on that day)
-    * The wind speed  (i.e. average wind speed over the sets of data on that day)
-    * The humidity    (i.e. average humidity over the sets of data on that day)
+    * An icon representation of weather conditions (presented by the most occurrence of weather icon over the sets of data on that day)
+    * The temperature (presented by the average temperature over the sets of data on that day)
+    * The wind speed  (presented by the average wind speed over the sets of data on that day)
+    * The humidity    (presented by the average humidity over the sets of data on that day)
 
 4. When a user click on a city in the search history they are again presented with current and future conditions for that city
 
