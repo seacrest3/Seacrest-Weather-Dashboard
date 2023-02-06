@@ -70,3 +70,9 @@ function renderSeachHistory() {
         // getWeatherCondition(city)
     };
 }
+
+//Listener for clicking the city in the search history
+$(document).on("click", "#search-city", function () {
+    var cityOnClick = $(this).attr("data-city");
+    // getWeatherCondition(cityOnClick);
+});
