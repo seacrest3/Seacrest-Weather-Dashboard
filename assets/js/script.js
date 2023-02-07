@@ -309,11 +309,8 @@ $("#search-button").on("click", function (event) {
 
     // Alert prompts for blank input and confirm to clear local storage
     if (city === "") {
-        if (confirm("Please enter the name of a city")) {
+        if (confirm("Please enter the name of a city"))
             return;
-          } else if (confirm("If you would like to clear the search history, please press 'OK' and then reload the webpage.")) {
-            localStorage.clear();
-          }
         return;
     }
 
