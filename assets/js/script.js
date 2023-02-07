@@ -180,7 +180,6 @@ function getWeatherCondition(city) {
 
                     // Find and save the code of weather icon for that day
                     var findIcon = findArrayFreqEl(iconArray);
-                    console.log("item is " + findIcon);
                 }
 
                 // Repeat the calculation for the third day weather data
