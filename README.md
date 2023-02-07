@@ -33,7 +33,7 @@ The app should:
 
 The following image shows the web application's appearance and functionality:
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/mockup.gif)
+![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for London.](./assets/images/mockup.png)
 
 When a user opens the app and searches for a city's weather in the serach input form:
 

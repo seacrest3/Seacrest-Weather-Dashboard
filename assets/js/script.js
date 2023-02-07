@@ -2,6 +2,7 @@
 // A weather dashboard that will use OpenWeather API call for 5-day / 3-hour weather forecast to retrieve weather data for cities
 
 var historyEl = $("#history");
+var todayEl = $("#today");
 var forecastEl = $("#forecast");
 var cities = [];
 var forecastDays = 5;                               // Open Weather '5 Days / 3 Hour Forecast'
@@ -53,6 +54,10 @@ function getWeatherCondition(city) {
     })
     // After the data comes back from the API
     .then(function (response) {
+        if (response.name != null) {
+            // Show border for current weather conditions
+            todayEl.css("border", "1px solid darkgrey");
+        }
         var imgIcon = $("<img>");
         // Store the code of weather icon in the iconUrl variable
         var iconUrl = response.weather[0].icon;
@@ -301,11 +306,17 @@ $("#search-button").on("click", function (event) {
 
     // Get city input from the search input box
     var city = $("#search-input").val().trim();
-    // Return for blank input
+
+    // Alert prompts for blank input and confirm to clear local storage
     if (city === "") {
-        localStorage.clear();
+        if (confirm("Please enter the name of a city")) {
+            return;
+          } else if (confirm("If you would like to clear the search hitsory, please press 'OK' and then reload the webpage.")) {
+            localStorage.clear();
+          }
         return;
     }
+
     // Push city input into the cities array
     cities.push(city);
     // Store searched history into localStorage
