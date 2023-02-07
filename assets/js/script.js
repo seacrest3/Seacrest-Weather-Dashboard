@@ -311,7 +311,7 @@ $("#search-button").on("click", function (event) {
     if (city === "") {
         if (confirm("Please enter the name of a city")) {
             return;
-          } else if (confirm("If you would like to clear the search hitsory, please press 'OK' and then reload the webpage.")) {
+          } else if (confirm("If you would like to clear the search history, please press 'OK' and then reload the webpage.")) {
             localStorage.clear();
           }
         return;
